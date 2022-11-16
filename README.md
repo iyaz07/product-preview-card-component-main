@@ -50,15 +50,25 @@ Users should be able to:
 ### What I learned
 
 This project helped understand that i can change the Img element corresponding to size in CSS media query asides from the HTMl picture and source tweak that I had previously learnt.
-img {
+
+
+``img {
   content: URL("http.....");
-}
+}``
+
+
+
+
 I also learnt to insert a line break in Css using the before and after Pseudo selector, asides from the HTML <br> syntax i had previously learnt.
 
-#content::after{
+
+
+``#content::after{
     content: "\a";
     white-space: pre;
-}
+}``
+
+
 
 
 ### Continued development
