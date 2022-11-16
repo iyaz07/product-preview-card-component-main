@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+ background-color: hsl(30deg, 38%, 92%);
+ width: 100vw;
+ height: 100vh;
+ line-height: 2rem;
+ display: grid;
+ place-items: center;
+
+
+}
+
+
+.container{ 
+   background-color: white;
+   border-radius: 10px;
+   display: flex;
+   margin: 15px;
+   overflow: hidden;
+
+}
+.content{
+margin-left: 15px;
+max-width: 100%;
+max-height: 100%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+   
+h1{
+    font-family: fraunces;  
+    margin-bottom: 15px;
+
+}
+
+p{
+    font:14px/1.4em Montserrat;
+    opacity: 0.5;
+    text-align: left;
+}
+
+#image-label{
+    position: relative;
+    top: 2px;
+    margin-top: 0;
+    font-size: 10px;
+    opacity: 0.5;
+    letter-spacing:5px ;
+    text-transform: uppercase;}
+
+
+.price{
+    margin-bottom: 15px;
+    display: flex;
+    gap: 4em;
+}
+
+
+.new{
+    color: hsl(158, 36%, 37%);
+    font:28px fraunces;
+}
+.old{
+    opacity:0.5;
+    text-decoration: line-through;
+    font-size:15px;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:hsl(0, 0%, 100%);
+    line-height: 2em;
+    background-color:hsl(228, 12%, 48%);
+    height:2.5em;
+    width: 100%;
+    text-align: center;
+    border-style: hidden;
+    border-radius: 7px;
+    padding:10px;
+    transition: background-color 2s;
+}
+button::before {content: url(images/icon-cart.svg);
+}
+button:hover{
+    background-color: hsl(212, 21%, 14%);
+    cursor: pointer;}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 639px){
+   .container{
+    max-height: 90vh;
+    max-width: 80vw;
+    flex-direction: column;}
+    .content{
+        padding: 15px;
+    }
+
+}
+
+@media screen and (min-width: 640px){
+    .container{
+        max-width: 600px;
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+}
+    #line1::after{
+     content: "\a";
+     white-space: pre;
+    }
+    .content{padding: 30px;}
+
+
+
+@media screen and (max-width: 639px){
+    .mobile-img {width: 100%;
+    max-width: 375px;}
+}
+@media screen and (min-width: 640px){
+    .mobile-img{
+   content: url(images/image-product-desktop.jpg);
+    width: 100%;
+    max-width: 350px;
+}
+}
